@@ -15,7 +15,7 @@ export const processor = new EvmBatchProcessor()
     // For a full list of supported networks and config options
     // see https://docs.subsquid.io/evm-indexing/
     archive: "https://v2.archive.subsquid.io/network/arbitrum-one-demo",
-    chain: process.env.RPC_ARBITRUM_ONE_HTTP,
+    //chain: process.env.RPC_ARBITRUM_ONE_HTTP,
 
     // Must be set for RPC ingestion (https://docs.subsquid.io/evm-indexing/evm-processor/)
     // OR to enable contract state queries (https://docs.subsquid.io/evm-indexing/query-state/)

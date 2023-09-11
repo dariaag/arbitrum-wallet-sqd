@@ -18,24 +18,23 @@ processor.run(new TypeormDatabase({ supportHotBlocks: true }), async (ctx) => {
         })
       );
     }
-    if (c.header.height <= 4628179) {
-      for (let tr of c.traces) {
-        const tx = tr.transaction;
-        if (!tx) continue;
 
-        console.log(tx);
-        transactions.set(
-          tx.hash,
-          new Transaction({
-            id: tx.hash,
-            block: c.header.height,
-            address: tx.from,
-            to: tx.to,
-            value: tx.value,
-            txHash: tx.hash,
-          })
-        );
-      }
+    for (let tr of c.traces) {
+      const tx = tr.transaction;
+      if (!tx) continue;
+
+      console.log(tx);
+      transactions.set(
+        tx.hash,
+        new Transaction({
+          id: tx.hash,
+          block: c.header.height,
+          address: tx.from,
+          to: tx.to,
+          value: tx.value,
+          txHash: tx.hash,
+        })
+      );
     }
   }
 

@@ -5,8 +5,7 @@ description: 'The very first evm squid from manifest  '
 build: 
 deploy:
   addons:
-    rpc:
-      - arbitrum-one:http
+   
       
     postgres: 
   processor:
